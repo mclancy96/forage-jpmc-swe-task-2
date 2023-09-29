@@ -30,9 +30,12 @@ class App extends Component<{}, IState> {
 
   /**
    * Render Graph react component with state.data parse as property data
+   * Requires that showGraph state is true
    */
   renderGraph() {
-    return (<Graph data={this.state.data}/>)
+    if (this.state.showGraph) {
+      return (<Graph data={this.state.data}/>)
+    }
   }
 
   /**
